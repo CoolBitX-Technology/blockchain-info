@@ -1,0 +1,29 @@
+{
+  "name": "@coolbitx-technology/blockchain-info",
+  "version": "1.0.0",
+  "description": "Blockchain Information",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoolBitX-Technology/blockchain-info.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@coolbitx-technology/eslint-config-cp": "^1.0.0",
+    "@types/node": "^17.0.27",
+    "axios": "^0.27.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
