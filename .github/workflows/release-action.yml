@@ -1,6 +1,9 @@
 name: Push Github Private NPM Registry
 
-on: release
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
@@ -12,4 +15,3 @@ jobs:
     uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@master
     secrets:
       CP_SLACK_CHANNEL_RG_CRYPTO: ${{ secrets.CP_SLACK_CHANNEL_RG_CRYPTO }}
-      
