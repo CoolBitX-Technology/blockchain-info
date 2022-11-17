@@ -30,3 +30,130 @@ export enum Network {
   Aptos = 'Aptos',
   CryptoOrg = 'Crypto.org',
 }
+
+export const CoinMap = {
+  BTC: {
+    name: 'Bitcoin',
+    symbol: 'BTC',
+  },
+  ETH: {
+    name: 'Ethereum',
+    symbol: 'ETH',
+  },
+  Goerli: {
+    name: 'Goerli',
+    symbol: 'GoerliETH',
+  },
+  LTC: {
+    name: 'Litecoin',
+    symbol: 'LTC',
+  },
+  XRP: {
+    name: 'Ripple',
+    symbol: 'XRP',
+  },
+  BCH: {
+    name: 'Bitcoin Cash',
+    symbol: 'BCH',
+  },
+  ZEN: {
+    name: 'Horizen',
+    symbol: 'XRP',
+  },
+  ICX: {
+    name: 'Icon',
+    symbol: 'ICX',
+  },
+  BNB: {
+    name: 'Binance Chain',
+    symbol: 'BNB',
+  },
+  XLM: {
+    name: 'Stellar',
+    symbol: 'XLM',
+  },
+  KAG: {
+    name: 'Kinesis Silver',
+    symbol: 'KAG',
+  },
+  KAU: {
+    name: 'Kinesis Gold',
+    symbol: 'KAU',
+  },
+  BSC: {
+    name: 'Binance Smart Chain',
+    symbol: 'BNB',
+  },
+  SGB: {
+    name: 'Songbird',
+    symbol: 'SGB',
+  },
+  TRX: {
+    name: 'TRON',
+    symbol: 'TRX',
+  },
+  ATOM: {
+    name: 'Cosmos',
+    symbol: 'ATOM',
+  },
+  CROORG: {
+    name: 'Crypto.org',
+    symbol: 'CRO',
+  },
+  DOT: {
+    name: 'Polkadot',
+    symbol: 'DOT',
+  },
+  CRO: {
+    name: 'Cronos',
+    symbol: 'CRO',
+  },
+  ETC: {
+    name: 'Ethereum Classic',
+    symbol: 'ETC',
+  },
+  MATIC: {
+    name: 'Polygon',
+    symbol: 'MATIC',
+  },
+  KSM: {
+    name: 'Kusama',
+    symbol: 'KSM',
+  },
+  ADA: {
+    name: 'Cardano',
+    symbol: 'ADA',
+  },
+  LUNC: {
+    name: 'Terra Classic',
+    symbol: 'LUNC',
+  },
+  LUNA: {
+    name: 'Terra',
+    symbol: 'LUNA',
+  },
+  ARETH: {
+    name: 'Arbitrum',
+    symbol: 'ARETH',
+  },
+  XTZ: {
+    name: 'Tezos',
+    symbol: 'XTZ',
+  },
+  AVAXC: {
+    name: 'Avalanche C-Chain',
+    symbol: 'AVAX',
+  },
+  SOL: {
+    name: 'Solana',
+    symbol: 'SOL',
+  },
+  OETH: {
+    name: 'Optimism',
+    symbol: 'OETH',
+  },
+  APTOS: {
+    name: 'Aptos',
+    symbol: 'APT',
+  },
+};
