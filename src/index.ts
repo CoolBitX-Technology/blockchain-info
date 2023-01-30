@@ -29,6 +29,7 @@ export enum Network {
   BinanceSmartChain = 'Binance Smart Chain',
   Aptos = 'Aptos',
   CryptoOrg = 'Crypto.org',
+  Flare = 'Flare',
 }
 
 export const CoinMap = {
@@ -155,5 +156,9 @@ export const CoinMap = {
   APTOS: {
     name: 'Aptos',
     symbol: 'APT',
+  },
+  FLR: {
+    name: 'Flare',
+    symbol: 'FLR',
   },
 };
