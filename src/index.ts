@@ -30,6 +30,7 @@ export enum Network {
   Aptos = 'Aptos',
   CryptoOrg = 'Crypto.org',
   Flare = 'Flare',
+  ThunderCore = 'ThunderCore',
 }
 
 export const CoinMap = {
@@ -161,4 +162,8 @@ export const CoinMap = {
     name: 'Flare',
     symbol: 'FLR',
   },
+  TT: {
+    name: 'ThunderCore',
+    symbol: 'TT',
+  }
 };
