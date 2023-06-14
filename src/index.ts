@@ -32,6 +32,23 @@ export enum Network {
   Flare = 'Flare',
   ThunderCore = 'ThunderCore',
   OKTChain = 'OKXChain',
+  zkSync = 'zkSync Era',
+}
+
+const EvmChainIdList: Record<string, number> = {
+  [Network.Ethereum]: 1,
+  [Network.BinanceSmartChain]: 56,
+  [Network.Polygon]: 137,
+  [Network.Arbitrum]: 42161,
+  [Network.AvalancheCChain]: 43114,
+  [Network.Optimism]: 10,
+  [Network.EthereumClassic]: 61,
+};
+
+export function getEvmChainIdByNetwork(network: Network): number {
+  const id = EvmChainIdList[network];
+  if (!id) throw Error(`${network} chain ID not found`);
+  return id;
 }
 
 export const CoinMap = {
@@ -170,5 +187,9 @@ export const CoinMap = {
   OKT: {
     name: 'OKXChain',
     symbol: 'OKT',
+  },
+  ZKS: {
+    name: 'zkSync Era',
+    symbol: 'ETH',
   },
 };
