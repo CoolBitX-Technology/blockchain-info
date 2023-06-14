@@ -32,6 +32,7 @@ export enum Network {
   Flare = 'Flare',
   ThunderCore = 'ThunderCore',
   OKTChain = 'OKXChain',
+  zkSync = 'zkSync Era',
 }
 
 const EvmChainIdList: Record<string, number> = {
@@ -186,5 +187,9 @@ export const CoinMap = {
   OKT: {
     name: 'OKXChain',
     symbol: 'OKT',
+  },
+  ZKS: {
+    name: 'zkSync Era',
+    symbol: 'ETH',
   },
 };
