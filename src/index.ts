@@ -33,6 +33,7 @@ export enum Network {
   ThunderCore = 'ThunderCore',
   OKTChain = 'OKXChain',
   zkSync = 'zkSync Era',
+  Goerli = 'Goerli',
 }
 
 const EvmChainIdList: Record<string, number> = {
