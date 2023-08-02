@@ -88,7 +88,7 @@ export const CoinMap: {[key: string]: {name: Network;symbol: string}} = {
   },
   ZEN: {
     name: Network.Zen,
-    symbol: 'XRP',
+    symbol: 'ZEN',
   },
   ICX: {
     name: Network.Icon,
