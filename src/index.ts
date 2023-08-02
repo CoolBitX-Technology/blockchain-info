@@ -44,6 +44,13 @@ const EvmChainIdList: Record<string, number> = {
   [Network.AvalancheCChain]: 43114,
   [Network.Optimism]: 10,
   [Network.EthereumClassic]: 61,
+  [Network.Zen]: 7332,
+  [Network.Cronos]: 25,
+  [Network.Flare]: 14,
+  [Network.ThunderCore]: 108,
+  [Network.OKTChain]: 66,
+  [Network.zkSync]: 324,
+  [Network.Goerli]: 5,
 };
 
 export function getEvmChainIdByNetwork(network: Network): number {
@@ -52,145 +59,145 @@ export function getEvmChainIdByNetwork(network: Network): number {
   return id;
 }
 
-export const CoinMap = {
+export const CoinMap: {[key: string]: {name: Network;symbol: string}} = {
   BTC: {
-    name: 'Bitcoin',
+    name: Network.Bitcoin,
     symbol: 'BTC',
   },
   ETH: {
-    name: 'Ethereum',
+    name: Network.Ethereum,
     symbol: 'ETH',
   },
   Goerli: {
-    name: 'Goerli',
+    name: Network.Goerli,
     symbol: 'GoerliETH',
   },
   LTC: {
-    name: 'Litecoin',
+    name: Network.Litecoin,
     symbol: 'LTC',
   },
   XRP: {
-    name: 'Ripple',
+    name: Network.Ripple,
     symbol: 'XRP',
   },
   BCH: {
-    name: 'Bitcoin Cash',
+    name: Network.BitcoinCash,
     symbol: 'BCH',
   },
   ZEN: {
-    name: 'Horizen',
+    name: Network.Zen,
     symbol: 'XRP',
   },
   ICX: {
-    name: 'Icon',
+    name: Network.Icon,
     symbol: 'ICX',
   },
   BNB: {
-    name: 'Binance Chain',
+    name: Network.Binance,
     symbol: 'BNB',
   },
   XLM: {
-    name: 'Stellar',
+    name: Network.Stellar,
     symbol: 'XLM',
   },
   KAG: {
-    name: 'Kinesis Silver',
+    name: Network.KinesisSilver,
     symbol: 'KAG',
   },
   KAU: {
-    name: 'Kinesis Gold',
+    name: Network.KinesisGold,
     symbol: 'KAU',
   },
   BSC: {
-    name: 'Binance Smart Chain',
+    name: Network.BinanceSmartChain,
     symbol: 'BNB',
   },
   SGB: {
-    name: 'Songbird',
+    name: Network.Songbird,
     symbol: 'SGB',
   },
   TRX: {
-    name: 'TRON',
+    name: Network.Tron,
     symbol: 'TRX',
   },
   ATOM: {
-    name: 'Cosmos',
+    name: Network.Cosmos,
     symbol: 'ATOM',
   },
   CROORG: {
-    name: 'Crypto.org',
+    name: Network.CryptoOrg,
     symbol: 'CRO',
   },
   DOT: {
-    name: 'Polkadot',
+    name: Network.Polkadot,
     symbol: 'DOT',
   },
   CRO: {
-    name: 'Cronos',
+    name: Network.Cronos,
     symbol: 'CRO',
   },
   ETC: {
-    name: 'Ethereum Classic',
+    name: Network.EthereumClassic,
     symbol: 'ETC',
   },
   MATIC: {
-    name: 'Polygon',
+    name: Network.Polygon,
     symbol: 'MATIC',
   },
   KSM: {
-    name: 'Kusama',
+    name: Network.Kusama,
     symbol: 'KSM',
   },
   ADA: {
-    name: 'Cardano',
+    name: Network.Cardano,
     symbol: 'ADA',
   },
   LUNC: {
-    name: 'Terra Classic',
+    name: Network.TerraClassic,
     symbol: 'LUNC',
   },
   LUNA: {
-    name: 'Terra',
+    name: Network.Terra,
     symbol: 'LUNA',
   },
   ARETH: {
-    name: 'Arbitrum',
+    name: Network.Arbitrum,
     symbol: 'ARETH',
   },
   XTZ: {
-    name: 'Tezos',
+    name: Network.Tezos,
     symbol: 'XTZ',
   },
   AVAXC: {
-    name: 'Avalanche C-Chain',
+    name: Network.AvalancheCChain,
     symbol: 'AVAX',
   },
   SOL: {
-    name: 'Solana',
+    name: Network.Solana,
     symbol: 'SOL',
   },
   OETH: {
-    name: 'Optimism',
+    name: Network.Optimism,
     symbol: 'OETH',
   },
   APTOS: {
-    name: 'Aptos',
+    name: Network.Aptos,
     symbol: 'APT',
   },
   FLR: {
-    name: 'Flare',
+    name: Network.Flare,
     symbol: 'FLR',
   },
   TT: {
-    name: 'ThunderCore',
+    name: Network.ThunderCore,
     symbol: 'TT',
   },
   OKT: {
-    name: 'OKXChain',
+    name: Network.OKTChain,
     symbol: 'OKT',
   },
   ZKS: {
-    name: 'zkSync Era',
+    name: Network.zkSync,
     symbol: 'ETH',
   },
 };
