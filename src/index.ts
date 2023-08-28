@@ -35,6 +35,7 @@ export enum Network {
   zkSync = 'zkSync Era',
   Goerli = 'Goerli',
   Linea = 'Linea',
+  Base = 'Base',
 }
 
 const EvmChainIdList: Record<string, number> = {
@@ -53,6 +54,7 @@ const EvmChainIdList: Record<string, number> = {
   [Network.zkSync]: 324,
   [Network.Goerli]: 5,
   [Network.Linea]: 59144,
+  [Network.Base]: 8453,
 };
 
 export function getEvmChainIdByNetwork(network: Network): number {
@@ -61,7 +63,7 @@ export function getEvmChainIdByNetwork(network: Network): number {
   return id;
 }
 
-export const CoinMap: {[key: string]: {name: Network;symbol: string}} = {
+export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   BTC: {
     name: Network.Bitcoin,
     symbol: 'BTC',
@@ -205,5 +207,9 @@ export const CoinMap: {[key: string]: {name: Network;symbol: string}} = {
   LINETH: {
     name: Network.Linea,
     symbol: 'ETH',
-  }
+  },
+  BASEETH: {
+    name: Network.Base,
+    symbol: 'BASEETH',
+  },
 };
