@@ -213,3 +213,8 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
     symbol: 'BASEETH',
   },
 };
+
+export enum WalletMode {
+  Software = 'Software',
+  Hardware = 'Hardware',
+}
