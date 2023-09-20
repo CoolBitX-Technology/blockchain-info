@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/CoolBitX-Technology/blockchain-info.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
