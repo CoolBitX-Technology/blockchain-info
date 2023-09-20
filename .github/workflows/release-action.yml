@@ -7,10 +7,9 @@ on:
 
 jobs:
   publish:
-    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_npm_package.yml@master
+    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package.yml@master
     secrets:
-      DEVOPS_READ_PACKAGE_TOKEN: ${{ secrets.DEVOPS_READ_PACKAGE_TOKEN }}
-      DEVOPS_WRITE_PACKAGE_TOKEN: ${{ secrets.DEVOPS_WRITE_PACKAGE_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   notify:
     needs: publish
     uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@master
