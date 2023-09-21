@@ -1,5 +1,5 @@
 {
-  "name": "@cbx/blockchain-info",
+  "name": "@coolbitx/blockchain-info",
   "version": "0.0.10",
   "description": "Blockchain Information",
   "main": "dist/index.js",
