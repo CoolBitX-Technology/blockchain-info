@@ -218,3 +218,10 @@ export enum WalletMode {
   Software = 'Software',
   Hardware = 'Hardware',
 }
+
+export enum AssetType {
+  COIN= 'COIN',
+  TOKEN= 'TOKEN',
+   NFT= 'NFT',
+}
+
