@@ -36,7 +36,7 @@ export enum Network {
   Goerli = 'Goerli',
   Linea = 'Linea',
   Base = 'Base',
-  Dis = 'Dis',
+  Dis = 'DIS Chain',
 }
 
 const EvmChainIdList: Record<string, number> = {
