@@ -227,7 +227,7 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   },
   ARETH_SEPOLIA: {
     name: Network.ArbitrumSepolia,
-    symbol: 'ARETH_SEPOLIA',
+    symbol: 'SepoliaARETH',
   },
 };
 
