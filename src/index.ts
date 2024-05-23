@@ -39,6 +39,7 @@ export enum Network {
   Dis = 'DIS Chain',
   Dogecoin = 'Dogecoin',
   ArbitrumSepolia = 'Arbitrum Sepolia',
+  TON = 'TON',
 }
 
 const EvmChainIdList: Record<string, number> = {
@@ -228,6 +229,10 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   ARETH_SEPOLIA: {
     name: Network.ArbitrumSepolia,
     symbol: 'SepoliaARETH',
+  },
+  TON: {
+    name: Network.TON,
+    symbol: 'TON',
   },
 };
 
