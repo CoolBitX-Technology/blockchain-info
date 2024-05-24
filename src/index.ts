@@ -39,7 +39,7 @@ export enum Network {
   Dis = 'DIS Chain',
   Dogecoin = 'Dogecoin',
   ArbitrumSepolia = 'Arbitrum Sepolia',
-  TON = 'The Open Network',
+  TON = 'TON',
 }
 
 const EvmChainIdList: Record<string, number> = {
