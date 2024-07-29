@@ -40,6 +40,7 @@ export enum Network {
   Dogecoin = 'Dogecoin',
   ArbitrumSepolia = 'Arbitrum Sepolia',
   TON = 'TON',
+  KASPA = 'Kaspa',
 }
 
 const EvmChainIdList: Record<string, number> = {
@@ -234,6 +235,10 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
     name: Network.TON,
     symbol: 'TON',
   },
+  KAS: {
+    name: Network.KASPA,
+    symbol: 'KAS',
+  }
 };
 
 export enum WalletMode {
