@@ -7,11 +7,11 @@ on:
 
 jobs:
   publish:
-    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package.yml@master
+    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package.yml@CW-21443_Update-Nodejs
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   notify:
     needs: publish
-    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@master
+    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@CW-21443_Update-Nodejs
     secrets:
       CP_SLACK_CHANNEL_RG_CRYPTO: ${{ secrets.CP_SLACK_CHANNEL_RG_CRYPTO }}
