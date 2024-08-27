@@ -1,9 +1,6 @@
 name: Push Github Private NPM Registry
 
-on:
-  push:
-    branches:
-      - master
+on: ["push", "workflow_dispatch"]
 
 jobs:
   publish:
