@@ -42,6 +42,7 @@ export enum Network {
   TON = "TON",
   KASPA = "Kaspa",
   SUI = "Sui",
+  CORE = 'Core',
 }
 
 const EvmChainIdList: Record<string, number> = {
@@ -63,6 +64,7 @@ const EvmChainIdList: Record<string, number> = {
   [Network.Linea]: 59144,
   [Network.Base]: 8453,
   [Network.Dis]: 513100,
+  [Network.CORE]: 1116,
 };
 
 export function getEvmChainIdByNetwork(network: Network): number {
@@ -243,6 +245,10 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   SUI: {
     name: Network.SUI,
     symbol: "SUI",
+  },
+  CORE: {
+    name: Network.CORE,
+    symbol: "CORE",
   },
 };
 
