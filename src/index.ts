@@ -1,9 +1,9 @@
 /**
- * DataNetwork enum for identifying different blockchain networks.
+ * Network enum for identifying different blockchain networks.
  * This enum is used for data identification purposes across the application.
- * Example usage: DataNetwork.Ethereum, DataNetwork.Bitcoin, etc.
+ * Example usage: Network.Ethereum, Network.Bitcoin, etc.
  */
-export enum DataNetwork {
+export enum Network {
   Bitcoin = 'Bitcoin',
   BitcoinCash = 'Bitcoin Cash',
   Binance = 'Binance Chain',
@@ -46,7 +46,8 @@ export enum DataNetwork {
   ArbitrumSepolia = 'Arbitrum Sepolia',
   TON = 'TON',
   KASPA = 'Kaspa',
-  SUI = 'Sui'
+  SUI = 'Sui',
+  CORE = 'Core',
 }
 
 /**
@@ -97,209 +98,212 @@ export enum PriceNetwork {
   CORE = 'core',
 }
 
-// For backward compatibility
-export type Network = DataNetwork;
 
 const EvmChainIdList: Record<string, number> = {
-  [DataNetwork.Ethereum]: 1,
-  [DataNetwork.BinanceSmartChain]: 56,
-  [DataNetwork.Polygon]: 137,
-  [DataNetwork.Arbitrum]: 42161,
-  [DataNetwork.ArbitrumSepolia]: 421614,
-  [DataNetwork.AvalancheCChain]: 43114,
-  [DataNetwork.Optimism]: 10,
-  [DataNetwork.EthereumClassic]: 61,
-  [DataNetwork.Zen]: 7332,
-  [DataNetwork.Cronos]: 25,
-  [DataNetwork.Flare]: 14,
-  [DataNetwork.ThunderCore]: 108,
-  [DataNetwork.OKTChain]: 66,
-  [DataNetwork.zkSync]: 324,
-  [DataNetwork.Goerli]: 5,
-  [DataNetwork.Linea]: 59144,
-  [DataNetwork.Base]: 8453,
-  [DataNetwork.Dis]: 513100,
+  [Network.Ethereum]: 1,
+  [Network.BinanceSmartChain]: 56,
+  [Network.Polygon]: 137,
+  [Network.Arbitrum]: 42161,
+  [Network.ArbitrumSepolia]: 421614,
+  [Network.AvalancheCChain]: 43114,
+  [Network.Optimism]: 10,
+  [Network.EthereumClassic]: 61,
+  [Network.Zen]: 7332,
+  [Network.Cronos]: 25,
+  [Network.Flare]: 14,
+  [Network.ThunderCore]: 108,
+  [Network.OKTChain]: 66,
+  [Network.zkSync]: 324,
+  [Network.Goerli]: 5,
+  [Network.Linea]: 59144,
+  [Network.Base]: 8453,
+  [Network.Dis]: 513100,
+  [Network.CORE]: 1116,
 };
 
-export function getEvmChainIdByNetwork(network: DataNetwork): number {
+export function getEvmChainIdByNetwork(network: Network): number {
   const id = EvmChainIdList[network];
   if (!id) throw Error(`${network} chain ID not found`);
   return id;
 }
 
-export const CoinMap: { [key: string]: { name: DataNetwork; symbol: string } } = {
+export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   BTC: {
-    name: DataNetwork.Bitcoin,
+    name: Network.Bitcoin,
     symbol: 'BTC',
   },
   ETH: {
-    name: DataNetwork.Ethereum,
+    name: Network.Ethereum,
     symbol: 'ETH',
   },
   Goerli: {
-    name: DataNetwork.Goerli,
+    name: Network.Goerli,
     symbol: 'GoerliETH',
   },
   LTC: {
-    name: DataNetwork.Litecoin,
+    name: Network.Litecoin,
     symbol: 'LTC',
   },
   XRP: {
-    name: DataNetwork.Ripple,
+    name: Network.Ripple,
     symbol: 'XRP',
   },
   BCH: {
-    name: DataNetwork.BitcoinCash,
+    name: Network.BitcoinCash,
     symbol: 'BCH',
   },
   ZEN: {
-    name: DataNetwork.Zen,
+    name: Network.Zen,
     symbol: 'ZEN',
   },
   ICX: {
-    name: DataNetwork.Icon,
+    name: Network.Icon,
     symbol: 'ICX',
   },
   BNB: {
-    name: DataNetwork.Binance,
+    name: Network.Binance,
     symbol: 'BNB',
   },
   XLM: {
-    name: DataNetwork.Stellar,
+    name: Network.Stellar,
     symbol: 'XLM',
   },
   KAG: {
-    name: DataNetwork.KinesisSilver,
+    name: Network.KinesisSilver,
     symbol: 'KAG',
   },
   KAU: {
-    name: DataNetwork.KinesisGold,
+    name: Network.KinesisGold,
     symbol: 'KAU',
   },
   BSC: {
-    name: DataNetwork.BinanceSmartChain,
+    name: Network.BinanceSmartChain,
     symbol: 'BNB',
   },
   SGB: {
-    name: DataNetwork.Songbird,
+    name: Network.Songbird,
     symbol: 'SGB',
   },
   TRX: {
-    name: DataNetwork.Tron,
+    name: Network.Tron,
     symbol: 'TRX',
   },
   ATOM: {
-    name: DataNetwork.Cosmos,
+    name: Network.Cosmos,
     symbol: 'ATOM',
   },
   CROORG: {
-    name: DataNetwork.CryptoOrg,
+    name: Network.CryptoOrg,
     symbol: 'CRO',
   },
   DOT: {
-    name: DataNetwork.Polkadot,
+    name: Network.Polkadot,
     symbol: 'DOT',
   },
   CRO: {
-    name: DataNetwork.Cronos,
+    name: Network.Cronos,
     symbol: 'CRO',
   },
   ETC: {
-    name: DataNetwork.EthereumClassic,
+    name: Network.EthereumClassic,
     symbol: 'ETC',
   },
   MATIC: {
-    name: DataNetwork.Polygon,
+    name: Network.Polygon,
     symbol: 'MATIC',
   },
   KSM: {
-    name: DataNetwork.Kusama,
+    name: Network.Kusama,
     symbol: 'KSM',
   },
   ADA: {
-    name: DataNetwork.Cardano,
+    name: Network.Cardano,
     symbol: 'ADA',
   },
   LUNC: {
-    name: DataNetwork.TerraClassic,
+    name: Network.TerraClassic,
     symbol: 'LUNC',
   },
   LUNA: {
-    name: DataNetwork.Terra,
+    name: Network.Terra,
     symbol: 'LUNA',
   },
   ARETH: {
-    name: DataNetwork.Arbitrum,
+    name: Network.Arbitrum,
     symbol: 'ARETH',
   },
   XTZ: {
-    name: DataNetwork.Tezos,
+    name: Network.Tezos,
     symbol: 'XTZ',
   },
   AVAXC: {
-    name: DataNetwork.AvalancheCChain,
+    name: Network.AvalancheCChain,
     symbol: 'AVAX',
   },
   SOL: {
-    name: DataNetwork.Solana,
+    name: Network.Solana,
     symbol: 'SOL',
   },
   OETH: {
-    name: DataNetwork.Optimism,
+    name: Network.Optimism,
     symbol: 'OETH',
   },
   APTOS: {
-    name: DataNetwork.Aptos,
+    name: Network.Aptos,
     symbol: 'APT',
   },
   FLR: {
-    name: DataNetwork.Flare,
+    name: Network.Flare,
     symbol: 'FLR',
   },
   TT: {
-    name: DataNetwork.ThunderCore,
+    name: Network.ThunderCore,
     symbol: 'TT',
   },
   OKT: {
-    name: DataNetwork.OKTChain,
+    name: Network.OKTChain,
     symbol: 'OKT',
   },
   ZKS: {
-    name: DataNetwork.zkSync,
+    name: Network.zkSync,
     symbol: 'ETH',
   },
   LINETH: {
-    name: DataNetwork.Linea,
+    name: Network.Linea,
     symbol: 'ETH',
   },
   BASEETH: {
-    name: DataNetwork.Base,
+    name: Network.Base,
     symbol: 'BASEETH',
   },
   DIS: {
-    name: DataNetwork.Dis,
+    name: Network.Dis,
     symbol: 'DIS',
   },
   DOGE: {
-    name: DataNetwork.Dogecoin,
+    name: Network.Dogecoin,
     symbol: 'DOGE',
   },
   ARETH_SEPOLIA: {
-    name: DataNetwork.ArbitrumSepolia,
+    name: Network.ArbitrumSepolia,
     symbol: 'SepoliaARETH',
   },
   TON: {
-    name: DataNetwork.TON,
+    name: Network.TON,
     symbol: 'TON',
   },
   KAS: {
-    name: DataNetwork.KASPA,
+    name: Network.KASPA,
     symbol: 'KAS',
   },
   SUI: {
-    name: DataNetwork.SUI,
+    name: Network.SUI,
     symbol: 'SUI',
-  }
+  },
+  CORE: {
+    name: Network.CORE,
+    symbol: "CORE",
+  },
 };
 
 export enum WalletMode {
