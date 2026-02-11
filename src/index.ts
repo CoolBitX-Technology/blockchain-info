@@ -48,6 +48,7 @@ export enum Network {
   KASPA = 'Kaspa',
   SUI = 'Sui',
   CORE = 'Core',
+  Zcash = 'Zcash',
 }
 
 /**
@@ -96,6 +97,7 @@ export enum PriceNetwork {
   KASPA = 'kaspa',
   SUI = 'sui',
   CORE = 'core',
+  Zcash = 'zcash',
 }
 
 
@@ -303,6 +305,10 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
   CORE: {
     name: Network.CORE,
     symbol: "CORE",
+  },
+  ZCASH: {
+    name: Network.Zcash,
+    symbol: "ZEC",
   },
 };
 
