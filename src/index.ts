@@ -306,7 +306,7 @@ export const CoinMap: { [key: string]: { name: Network; symbol: string } } = {
     name: Network.CORE,
     symbol: "CORE",
   },
-  ZCASH: {
+  ZEC: {
     name: Network.Zcash,
     symbol: "ZEC",
   },
