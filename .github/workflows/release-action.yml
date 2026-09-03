@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - master
-      - feat/CW-29077
 
 jobs:
   publish:
     permissions:
       id-token: write
       contents: read
-    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package_oidc.yml@feat/CW-29077-add-oidc
+    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package_oidc.yml@master
   notify:
     needs: publish
     uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@master
