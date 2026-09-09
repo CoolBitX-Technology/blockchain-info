@@ -7,9 +7,10 @@ on:
 
 jobs:
   publish:
-    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package.yml@master
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    permissions:
+      id-token: write
+      contents: read
+    uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/build_and_publish_official_public_npm_package_oidc.yml@master
   notify:
     needs: publish
     uses: CoolBitX-Technology/cp-workflow-template/.github/workflows/notify_slack.yml@master
